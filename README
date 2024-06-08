@@ -1,0 +1,41 @@
+# Égine VR Experience
+
+## Description
+
+Cette expérience VR vous emmène dans une visite virtuelle d'une salle de musée contenant une représentation de la statue du Laomédon du fronton grec d'Égine, qui se trouve aujourd’hui à la Glypsothèque de Munich. L'expérience a été créée comme test pour tester les différentes modalitées de présenation de ce modèle 3D crée pour le projet de photogrammétrie .
+
+
+## Procédure d'Installation / de Lancement
+
+Pour visualiser cette expérience VR, suivez ces étapes :
+
+1. Clonez ce dépôt sur votre machine locale.
+2. Ouvrez le fichier `index.html` dans un navigateur web compatible avec la réalité virtuelle.
+3. Explorez la salle de musée virtuelle en utilisant les contrôles de la VR.
+
+## Modules / Librairies / Scripts
+
+Ce projet utilise les technologies suivantes :
+
+- A-Frame : Bibliothèque JavaScript pour la création de contenu VR.
+- aframe-gif-shader : Plugin pour A-Frame permettant l'utilisation de GIF animés dans les textures.
+
+## Copyrights et Informations de Licence
+
+Le modèle 3D de la statue du Laomédon du fronton grec d'Égine a été créé après photogrammétrie, et les ressources audio et visuelles utilisées sont soit des créations originales soit sous licence appropriée. 
+
+## Contexte de Développement
+
+Ce projet a été réalisé dans le cadre du cours "" donnée par Isaac Pante à l'université de Lausanne, pour le semestre d'automne 2023.
+
+## Structure du Dossier
+
+À la racine de ce projet, vous trouverez :
+
+- `index.html` : Le fichier principal de l'expérience VR.
+- `assets/` : Dossier contenant les modèles 3D, textures et autres ressources nécessaires à l'expérience.
+- `README.md` : Ce fichier README fournissant des informations sur le projet.
+
+## Limites et Possibilités d'Amélioration
+
+J'ajout d'une commande pour rendre le déplacement dans la salle 3D 
