@@ -32,7 +32,7 @@ Tous les autres assets non mentionnés ont été créés par moi. Le modèle 3D 
 
 ## Contexte de Développement
  
-Ce projet a été réalisé dans le cadre du cours "Réalité Virtuelle" donné par Isaac Pante à l'université de Lausanne, pour le semestre d'automne 2023.
+Ce projet a été réalisé dans le cadre du cours "Réalité Virtuelle" dispensé par Isaac Pante (SLI, Lettres, UNIL), pour le semestre d'automne 2023.
 
 ## Structure du Dossier
 
