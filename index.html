@@ -17,17 +17,31 @@
         });
       }
     });
-    </script>
-    
+      AFRAME.registerComponent('rotate-object', {
+      init: function () {
+        const targetEl = document.querySelector('#E11');
+        this.el.addEventListener('click', function () {
+          const currentRotation = targetEl.getAttribute('rotation');
+          const newRotation = {
+            x: (currentRotation.x + 180) % 360,
+            y: currentRotation.y,
+            z: currentRotation.z
+          };
+          targetEl.setAttribute('rotation', newRotation);
+        });
+      }
+    });
+    </script>  
 </head>
 <body>
   <a-scene> 
-    <a-camera position="0.488 1.6 0.4">
+    <a-camera id="camera" position="0.488 1.6 0.4">
       <a-entity 
         cursor="fuse: true; fuseTimeout: 2000"
         position="0 0 -0.15"
         geometry="primitive: ring; radiusInner: 0.0025; radiusOuter: 0.0050"
-        material="color: black; shader: flat">
+        material="color: black; shader: flat"
+        mouse>
       </a-entity>
       <a-entity raycaster="objects: .clickable"></a-entity>
     </a-camera>
@@ -36,31 +50,30 @@
       <a-obj-model id="museumRoom" src="assets/museumRoom_2.obj"></a-obj-model>
       <a-obj-model id="E11" src="assets/RealityCapture_aphaia_2_13.obj"></a-obj-model>
       <audio id="backgroundDrone" src="assets/backgroundnoise.wav" preload="auto" loop></audio>
-      <audio id="museumTalk" src="assets/472647__shaunoboyle__quiet-museum-gallery.wav"></audio>
-      <audio id="audioClick" src="assets/110429__soundbytercom__wwwsoundbytercom-selectsound.wav"></audio>
+      <audio id="museumTalk" src="assets/quiet-museum-gallery.wav"></audio>
+      <audio id="audioClick" src="assets/selectsound.wav"></audio>
       <a-image id="infoIcon" src="assets/InfoPng.png"></a-image>
-      <a-image id="museumTexture" src="assets/herringbone_parquet_diff_2k.jpg"></a-image>
+      <a-image id="moveIcon" src="assets/moveIcon.png"/></a-image>
+      <a-image id="museumTexture" src="assets/herringbone_parquet.jpg"></a-image>
       <a-image id="statueTexture" src="assets/RealityCapture_E11_texture.jpeg"></a-image>
       <a-image id="museumSky" src="assets/museumplein_8k.png"></a-image>
+      <a-image id ="infoPlane" src="Assets/afficheEgine.png"></a-image>
     </a-assets>
 
     <a-sky src="#museumSky" rotation="0 -130 0"></a-sky>
     
-    <a-plane id="info-plane" visible="false" position="-0.073 2.441 -2" rotation="0 0 0" width="1" height="1" material="color: #FFF; src: #infoIcon"></a-plane>
-
+    <a-plane id="info-plane" visible="false" position="-0.073 2.441 -2" rotation="" width="1" height="1" material="src: Assets/afficheEgine.png" geometry="width: 2.88; height: 1.622"></a-plane>
 
     <a-entity position="0 0.85884 -1.02409" id="statue">
       <a-box material="color: #fff" scale="2.67884 1 1"></a-box>
       <a-box material="color: #fff" scale="2.67884 1 1" position="0 -0.03739 0.06632"></a-box>
       <a-obj-model src="#E11" rotation="-86.4536 -178.2025 -6.3501" material="src: #statueTexture" position="0.283 0.25003 0.37344"></a-obj-model>
-      <a-entity id="logo" class="clickable" geometry="primitive: plane" material="src: assets/InfoPng.png; transparent: true" position="0.81238 0.29846 0.57852" scale="0.172 0.155 1" 
-      animation__click="property: scale; startEvents: raycaster-intersected; dur: 2000; to: 0.2121 0.18535 1" 
-      sound="src: assets/110429__soundbytercom__wwwsoundbytercom-selectsound.wav; on: click; refDistance: 4; rolloffFactor: 4" 
-      animation__unclick="property: scale; startEvents: raycaster-intersected-cleared; dur: 2000; to: 0.172 0.155 1" toggle-visibility="">
-      </a-entity>
-</a-entity>
-      </a-entity>
     </a-entity>
+    
+    <a-entity id="logo" class="clickable" geometry="primitive: plane" material="src: assets/InfoPng.png; transparent: true" position="0.812 1.01426 -0.45565" scale="0.172 0.155 1" animation__click="property: scale; startEvents: raycaster-intersected; dur: 2000; to: 0.2121 0.18535 1" sound="src: assets/selectsound.wav; on: click; refDistance: 4; rolloffFactor: 4" animation__unclick="property: scale; startEvents: raycaster-intersected-cleared; dur: 2000; to: 0.172 0.155 1" toggle-visibility="">
+      </a-entity>
+      <a-entity id="movelogo" class="clickable" geometry="primitive: plane" material="src: assets/moveIcon.png; transparent: true" position="0.624 1.02241 -0.44504" scale="0.172 0.155 1" animation__click="property: scale; startEvents: raycaster-intersected; dur: 2000; to: 0.2121 0.18535 1" sound="src: assets/selectsound.wav; on: click; refDistance: 4; rolloffFactor: 4" animation__unclick="property: scale; startEvents: raycaster-intersected-cleared; dur: 2000; to: 0.172 0.155 1" rotate-object>
+      </a-entity>
 
     <a-entity id="room" scale="2.47066 1 4.15664" position="-0.02901 0 15.84216">
       <a-obj-model src="#museumRoom" material="side: double" position="0 0.91783 -4.23871" rotation="0 270 0" scale="0.2 0.66 0.21" obj-model=""></a-obj-model>
@@ -75,8 +88,8 @@
       <a-light type="ambient" color="#b5b5b5" position="0.49692 1.89276 -9.20801"></a-light>
     </a-entity>
 
-    <a-entity sound="src: #backgroundDrone; autoplay: true; loop: true; volume: 0.39"></a-entity>
-    <a-entity sound="src: #museumTalk; autoplay: true; loop: true; volume: 1"></a-entity>
+    <a-entity sound="src: #museumTalk; autoplay: true; loop: true; volume: 0.75"></a-entity>
+      
   </a-scene>
 </body>
 </html>
