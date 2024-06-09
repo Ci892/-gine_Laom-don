@@ -5,6 +5,7 @@
 Cette expérience VR vous emmène dans une visite virtuelle d'une salle de musée contenant un modèle de la statue du Laomédon du fronton grec d'Égine, qui se trouve aujourd’hui à la Glyptothèque de Munich. De plus, en regardant pendant 2 secondes l'icône "i", une affiche explicative apparaît. L'expérience a été créée comme test pour tester les différentes modalités de présentation de ce modèle 3D créé pour le projet de photogrammétrie.
 
 ![Vue d'ensemble](/Assets/mainView.png)
+![GIF](/Assets/VREgine.gif)
 
 ## Procédure d'Installation
 
