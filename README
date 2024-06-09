@@ -2,11 +2,7 @@
 
 ## Description
 
-Cette expérience VR vous emmène dans une visite virtuelle d'une salle de musée contenant une représentation de la statue du Laomédon du fronton grec d'Égine, qui se trouve aujourd’hui à la Glypsothèque de Munich. L'expérience a été créée comme test pour tester les différentes modalitées de présenation de ce modèle 3D crée pour le projet de photogrammétrie .
-
-## Capture d'écran
-
-
+Cette expérience VR vous emmène dans une visite virtuelle d'une salle de musée contenant un modèle de la statue du Laomédon du fronton grec d'Égine, qui se trouve aujourd’hui à la Glyptothèque de Munich. De plus, en regardant pendant 2 secondes l'icône "i", une affiche explicative apparaît. L'expérience a été créée comme test pour tester les différentes modalités de présentation de ce modèle 3D créé pour le projet de photogrammétrie.
 
 ## Procédure d'Installation / de Lancement
 
@@ -25,20 +21,26 @@ Ce projet utilise les technologies suivantes :
 
 ## Copyrights et Informations de Licence
 
-Le modèle 3D de la statue du Laomédon du fronton grec d'Égine a été créé après photogrammétrie, et les ressources audio et visuelles utilisées sont soit des créations originales soit sous licence appropriée. 
+- L'audio "selectsound.wav" créé par soundbyter.com, [lien](https://freesound.org/s/110429/), License: Sampling+
+- L'audio "quiet-museum-gallery.wav" créé par shaunoboyle, [lien](https://freesound.org/s/110429/), License: Attribution 4.0
+- L'image "museumplein_8k.png" de Greg Zaal, [lien](https://polyhaven.com/a/museumplein), License: CC0
+- L'image "herringbone_parquet.jpg" de Jandre van Heerden, [lien](https://polyhaven.com/a/herringbone_parquet), License: CC0
+
+Tous les autres assets non mentionnés ont été créés par moi. Le modèle 3D de la statue du Laomédon du fronton grec d'Égine a été créé par Camilla Proto, d'après les images fournies par le projet "Égine".
 
 ## Contexte de Développement
-
-Ce projet a été réalisé dans le cadre du cours "" donnée par Isaac Pante à l'université de Lausanne, pour le semestre d'automne 2023.
+ 
+Ce projet a été réalisé dans le cadre du cours "Réalité Virtuelle" donné par Isaac Pante à l'université de Lausanne, pour le semestre d'automne 2023.
 
 ## Structure du Dossier
 
 À la racine de ce projet, vous trouverez :
 
 - `index.html` : Le fichier principal de l'expérience VR.
-- `assets/` : Dossier contenant les modèles 3D, textures et autres ressources nécessaires à l'expérience.
+- `assets` : Dossier contenant les modèles 3D, textures et autres ressources nécessaires à l'expérience.
 - `README.md` : Ce fichier README fournissant des informations sur le projet.
 
-## Limites et Possibilités d'Amélioration
+## Problèmes et Possibilités d'Amélioration
 
-J'ajout d'une commande pour rendre le déplacement dans la salle 3D 
+La fonction de rotation ne marche pas, elle devrait se déclencher quand on regarde l’icône flèche pendant 2 secondes. 
+Les limitations actuelles de cette expérience incluent la nécessité d'ajouter plus d'animations pour la rendre plus intéressante, ainsi que des améliorations potentielles de la salle de musée pour offrir une expérience encore plus immersive. 
