@@ -46,4 +46,3 @@ Ce projet a été réalisé dans le cadre du cours "Réalité Virtuelle" dispens
 ## Problèmes et Possibilités d'Amélioration
 
 Les limitations actuelles de cette expérience incluent la nécessité d'ajouter plus d'animations pour la rendre plus intéressante, ainsi que des améliorations potentielles de la salle de musée pour offrir une expérience encore plus immersive.
-La fonction de rotation ne marche pas, elle devrait se déclencher quand on regarde l’icône flèche pendant 2 secondes.
